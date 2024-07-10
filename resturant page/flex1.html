@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+    <title> tablet view</title>
+    <style>
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:burlywood
+
+}
+
+.ch1{
+    width: 100%;
+    justify-content: center;
+   
+   /* background-color: burlywood;*/
+}
+   
+
+.ch2{
+    width: 100%;
+    justify-content: center;
+}
+
+.container{
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    list-style-type: none;
+    background-color: #f1f1f1;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    padding-left: 30px;
+}
+   
+li a {
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color:bisque;
+    padding-left: 50px;
+    
+}
+
+
+
+.c{
+    padding: 50px 0 ;
+}
+
+@media only screen and (min-width: 600px) {
+    body{
+        height: 100vh;
+    }
+    
+    .container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin-top: 30px; 
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .ch1{
+        width: 20%;
+        justify-content: center;
+       
+    }
+    
+    .ch2{
+        width: 70%;
+        justify-content: center;
+    }
+    
+    .ch1 ul{
+        list-style-type: none;
+        flex-wrap: wrap;
+        display: block;
+        
+    }
+    
+    li a {
+        display: block;
+        color: #000;
+        padding: 5% 10%;
+        text-decoration: none; 
+        
+    }
+  
+    .content{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        
+    }
+    
+    .c{
+        
+        width: 250px;
+
+    }   
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ch1">
+            <ul >
+                <li><a href="#" >Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+               
+              </ul>
+        </div>
+
+
+        <div class="ch2" >
+            <div class="image">
+                <img src="f.jpg" width="100%" height="100%">
+            </div>
+              
+            <div class="content">
+                <div class="c">
+                  <img src="11.jpg" style="max-width:100%;height:auto;">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, 
+                    alias ad explicabo odit earum beatae soluta corporis odio iure? Numquam.</p>
+                </div>
+              
+                <div class="c">
+                    <img src="5.jpg" style="max-width:100%;height:auto;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, 
+                        alias ad explicabo odit earum beatae soluta corporis odio iure? Numquam.</p>
+                </div>
+              
+                <div class="c">
+                    <img src="9.jpg" style="max-width:100%;height:auto;">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, 
+                        alias ad explicabo odit earum beatae soluta corporis odio iure? Numquam.</p>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
