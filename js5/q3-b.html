@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data</title>
+</head>
+<body>
+    <div id="photo"></div>
+
+    <select id="userDropdown"></select>
+    <button onclick="getUserData()">Get User Data</button>
+    <!-- <button onclick="getname()">Name</button> -->
+
+    <div id="div1"></div>
+
+    <script>
+        function getUserData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://reqres.in/api/users", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    var users = response.data;
+
+                    var dropdown = document.getElementById("userDropdown");
+                    dropdown.innerHTML = ""; 
+
+                    
+                    for (var i = 0; i < users.length; i++) {
+                        var user = users[i];
+                        var option = document.createElement("option");
+                        option.text = user.first_name + " " + user.last_name;
+                        
+                        dropdown.appendChild(option);
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        // function getname() {
+        //     var selectedUserId = document.getElementById("userDropdown").value;
+        //     var xhr = new XMLHttpRequest();
+        //     xhr.open("GET", `https://reqres.in/api/users/${selectedUserId}`, true);
+        //     xhr.onreadystatechange = function() {
+        //         if (xhr.readyState == 4 && xhr.status == 200) {
+        //             var afterparsing = JSON.parse(xhr.responseText);
+        //             document.getElementById("div1").innerHTML = `
+        //                 <p>Name: ${afterparsing.data.first_name} ${afterparsing.data.last_name}</p>
+        //                 <img src="${afterparsing.data.avatar}" alt="User Avatar">
+        //             `;
+        //         }
+        //     };
+        //     xhr.send();
+        // }
+    </script>
+</body>
+</html> 

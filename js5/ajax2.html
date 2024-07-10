@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getDataByID()">Get Data by id</button>
+    <input type="text" id="input1" name="postId">
+
+    <div id="div1"></div>
+    <script>
+        function getDataByID() {
+            var input1 = document.getElementById("input1").value;
+            var div = document.getElementById("div1");
+            // console.log(input1);
+
+
+            // step1
+            var xhr = new XMLHttpRequest();
+            // console.log(xhr.readyState);
+
+            // true => async
+            // false => sync
+            // step2
+            xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/" + input1);
+            // console.log(xhr.readyState);
+
+            // step3
+            xhr.onreadystatechange = function () {
+
+                // console.log(xhr.readyState);
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var data = xhr.response;
+                    var dataAfterParse = JSON.parse(data);
+                    // console.log(dataAfterParse);
+
+
+                    div.innerHTML =
+                        `Id: ${dataAfterParse.id} <br> Post title: ${dataAfterParse.title} Body: ${dataAfterParse.body}`
+
+
+                    // console.log(dataAfterParse.title);
+
+                    // console.log(dataAfterParse);
+
+
+                }
+            }
+
+            // step4
+
+            xhr.send();
+            // console.log(xhr.readyState);
+
+        }
+    </script>
+</body>
+
+</html>

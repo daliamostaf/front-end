@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="photo"></div>
+
+    <input type="text" id="input1" placeholder=" ID">
+    <button onclick="getnameByID()">get name by ID </button>
+
+    <div id="div1"></div>
+    
+    <button onclick="getname()">get user data</button>
+    
+    <script>
+        function getname() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://reqres.in/api/users/1", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var afterparsing = JSON.parse(xhr.responseText);
+                    document.getElementById("div1").innerHTML = `<p>Name: ${afterparsing.data.first_name} ${afterparsing.data.last_name}</p>
+                        <img src="${afterparsing.data.avatar}" alt="User Avatar"> `;
+                }
+            };
+            xhr.send();
+        }
+        
+        function getnameByID() {
+            var input1 = document.getElementById("input1").value;
+            var div = document.getElementById("div1");
+            var xhrr = new XMLHttpRequest();
+            xhrr.open("GET", "https://reqres.in/api/users/" + input1, true);
+            xhrr.onreadystatechange = function() {
+                if (xhrr.readyState == 4 && xhrr.status == 200) {
+                    var afterparsingg = JSON.parse(xhrr.responseText);
+                    div.innerHTML = `<p>Name: ${afterparsingg.data.first_name} ${afterparsingg.data.last_name}</p>
+                        <img src="${afterparsingg.data.avatar}" alt="User Avatar"> `;
+                }
+            };
+            xhrr.send();
+        }
+    </script>
+</body>
+</html>

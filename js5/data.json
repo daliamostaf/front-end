@@ -1,0 +1,16 @@
+{"students":[{
+    "name":"ali",
+    "age":22,
+    "grade":false,
+    "address":{"street":"any street"},
+    "skills":["html","css"]
+},
+{
+    "name":"ali",
+    "age":22,
+    "grade":false,
+    "address":{"street":"any street"},
+    "skills":["html","css"]  
+}],
+"employee":[{}]
+}
