@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+  
+  <style>
+    #canvas-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    canvas {
+      border: 1px solid black;
+      display: block;
+    }
+
+    #smile-canvas {
+      display: none;
+     
+    }
+  </style>
+  <title>Canvas Example with Hover</title>
+</head>
+
+<body>
+  <div id="canvas-container">
+    <canvas id="sad-canvas" width="260" height="290"></canvas>
+    <canvas id="smile-canvas" width="260" height="290" ></canvas>
+  </div>
+  <script>
+    const sadCanvas = document.getElementById('sad-canvas');
+    const smileCanvas = document.getElementById('smile-canvas');
+    const sadCtx = sadCanvas.getContext('2d');
+    const smileCtx = smileCanvas.getContext('2d');
+    const sadImage = new Image();
+    const smileImage = new Image();
+
+    sadImage.src = 'sad.jpg';
+    smileImage.src = 'smile.jpg';
+
+    sadImage.onload = () => {
+      sadCtx.drawImage(sadImage, 0, 0, sadCanvas.width *0.9, sadCanvas.height *0.9);
+    };
+
+    smileImage.onload = () => {
+      smileCtx.drawImage(smileImage, 0, 0, smileCanvas.width *1, smileCanvas.height *1);
+    };
+
+    const canvasContainer = document.getElementById('canvas-container');
+
+    canvasContainer.addEventListener('mouseenter', () => {
+      sadCanvas.style.display = 'none';
+      smileCanvas.style.display = 'block';
+    });
+
+    canvasContainer.addEventListener('mouseleave', () => {
+      sadCanvas.style.display = 'block';
+      smileCanvas.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
+ 
