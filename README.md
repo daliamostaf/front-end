@@ -1,0 +1,2 @@
+I am a front-end developer with experience in HTML, CSS, responsive web design, JavaScript, ES-Next, TypeScript, and Angular. I participated in the ITI Summer Training in 2023, where I developed various projects and tasks utilizing these technologies.                                                                                                                                                    
+During my ITI Summer Training, I completed a series of projects and tasks that demonstrate my skills and knowledge in front-end development. Here are some highlights
