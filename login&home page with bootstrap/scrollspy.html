@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+  body{
+    background-color: rgb(235, 213, 187);
+  }
+  
+</style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">     <!-- collapse - navbar-->
+    <a class="navbar-brand" href="#welcomeMessage" data-toggle="collapse">Website</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="welcomeMessage" href="#">Welcome </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#loginModal" href="#">Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+               <!-- Login Modal -->
+  <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+            </div>
+              
+
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" minlength="6" required>
+                <div class="invalid-feedback">
+                  Please enter a password with at least 6 characters.
+                </div>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary id=loginButton ">Confirm</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="loginButton">Login</button>
+          
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading1">First</a>  <!-- scrollspy-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading2">Second</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading3">Third</a>  <!-- scrollspy-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#scrollspyHeading4">Fourth</a>  <!-- scrollspy-->
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <h4 id="scrollspyHeading1">First heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    
+    <h4 id="scrollspyHeading2">Second heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, laboriosam quis libero obcaecati suscipit molestias ipsam modi necessitatibus natus culpa hic recusandae velit quod, eaque cum. Fugiat error optio dolorum.</p>
+    <h4 id="scrollspyHeading3">Third heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod dolore et quam pariatur, ea, veritatis cum explicabo molestiae placeat atque, nobis optio amet! Rerum itaque ab ipsum magni exercitationem?</p>
+    <h4 id="scrollspyHeading4">Fourth heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quasi nihil quas laborum veritatis modi rerum velit necessitatibus, qui tenetur vitae eum ducimus tempore distinctio iusto adipisci ipsa eligendi cum!</p>
+    
+    <h4 id="scrollspyHeading5">Fifth heading</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem perspiciatis in harum aliquam minima. Assumenda excepturi nisi quae quis omnis, voluptatum magni quidem dolorum eveniet facilis eum numquam mollitia temporibus?</p>
+    
+  </div>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <script>   // message name
+    $(document).ready(function () {
+      
+      $('#loginButton').click(function ()
+       {
+        var username = $('#username').val();
+        $('#welcomeMessage').text('Welcome ' + username);
+        $('#loginModal').modal('hide');
+      }
+      );
+    }
+    );
+  </script>
+</body>
+</html>
