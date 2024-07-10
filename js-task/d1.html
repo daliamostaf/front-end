@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./demo.js"></script>
+   <style>
+       *{
+           background-color: darkorchid;
+       }
+   </style>
+    
+
+    </head>
+<body>
+  
+<button onclick="calculateSum()">enter numbers </button>
+<script>
+  function calculateSum() {
+    var num1 = parseFloat(prompt("Enter the first number:"));
+    var num2 = parseFloat(prompt("Enter the second number:"));
+
+    var result = sumNumbers(num1, num2);
+      document.write(" result =" + result);
+    
+  }
+</script> 
+
+
+</body>
+</html>

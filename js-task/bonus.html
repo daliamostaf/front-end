@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./bonus.js"></script>
+   <style>
+       *{
+           background-color:darkseagreen;
+       }
+   </style>
+    
+
+    </head>
+<body>
+  
+  <script>
+    var a=prompt("enter your name");
+    var input=a;
+    a=parseInt(a);
+    while(!isNaN(a)){
+        var a=prompt("enter valid name");
+    }
+    document.write(`welcome ${input} <br>`);
+    
+    var a=prompt("enter your birthday");
+    document.write(`your birth year ${input} <br>`);
+    a=parseInt(a);
+    while(a>2010){
+        var a=prompt("enter valid birthday");
+    }
+    a=2023-a;
+    document.write(`your age is ${a}`);
+    
+
+</script>
+   
+
+
+
+</body>
+</html>
