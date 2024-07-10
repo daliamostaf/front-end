@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username" name="username" placeholder="enter name">
+    <br>
+    <br>
+    <input type="text" id="userage" name="userage" placeholder="enter age">
+
+    <br>
+    <button onclick="createsessionstorage()">Create sessionstorage</button>
+    <button onclick="readsessionstorage()">Read sessionstorage</button>
+    <button onclick="deletesessionstorage()">Delete sessionstorage</button>
+
+
+    <script>
+        function createsessionstorage(){
+            var user = document.getElementById("username").value;
+            var age = document.getElementById("userage").value;
+
+            sessionStorage.setItem("username",user);
+
+            sessionStorage.userAge=age;
+
+        }
+
+        function readsessionstorage(){
+            var name=sessionStorage.getItem("username");
+            console.log(name);
+            var age=sessionStorage.userAge;
+            console.log(age);
+        }
+        function deletesessionstorage(){
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("userAge");
+        }
+    </script>
+
+</body>
+</html>

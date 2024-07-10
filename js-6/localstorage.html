@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="username" name="username" placeholder="enter name">
+    <br>
+    <br>
+    <input type="text" id="userage" name="userage" placeholder="enter age">
+
+    <br>
+    <button onclick="createlocalstorage()">Create localstorage</button>
+    <button onclick="readlocalstorage()">Read localstorage</button>
+    <button onclick="deletelocalstorage()">Delete localstorage</button>
+
+
+    <script>
+        function createlocalstorage() {
+            var username = document.getElementById("username").value;
+            var userage = document.getElementById("userage").value;
+
+            localStorage.setItem("UserName", username);
+            // localStorage.setItem("UserName",username);
+            localStorage.UserAge = userage;
+        }
+
+        function readlocalstorage() {
+
+            if (localStorage.UserName) {
+                var name = localStorage.getItem("UserName");
+                console.log(name);
+            }
+            if (localStorage.UserAge) {
+                var age = localStorage.UserAge;
+                console.log(age);
+            }
+        }
+
+        function deletelocalstorage() {
+            localStorage.removeItem("UserName");
+            localStorage.removeItem("UserAge");
+            alert("deleted");
+        }
+    </script>
+</body>
+
+</html>

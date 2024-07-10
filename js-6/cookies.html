@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username" name="username" placeholder="enter name">
+    <br>
+    <br>
+    <input type="text" id="userage" name="userage" placeholder="enter age">
+
+    <br>
+    <button onclick="createCookie()">Create cookie</button>
+    <button onclick="readCookie()">Read cookie</button>
+    <button onclick="deleteCookie()">Delete cookie</button>
+
+    <script>
+        function createCookie(){
+
+            var date1=new Date();
+            var expire=date1.getDate()+3;
+            date1.setDate(expire);
+            var userName=document.getElementById("username").value;
+
+            document.cookie="Name="+userName+";expires="+date1.toDateString();
+
+            var userAge=document.getElementById("userage").value;
+
+            document.cookie="Age="+userAge+";expires="+date1.toDateString();
+
+        }
+
+        function readCookie(){
+            var data=document.cookie;
+            // console.log(data);
+             var res=data.split(";");
+            /// console.log(res);
+             var res2=res[0].split("=");
+             console.log(res2[1]);//value of name
+            // var res3=res[1].split("=");
+
+            // console.log(res3[1]);//value of age
+        }
+
+        function deleteCookie(){
+            var date1=new Date();
+            date1.setDate(date1.getDate()-1);
+            document.cookie="Name=;expires="+date1.toDateString();
+            document.cookie="Age=;expires="+date1.toDateString();
+            // document.cookie="Name="+null+";expires="+date1.toDateString();
+            // document.cookie="Age="+null+";expires="+date1.toDateString();
+
+            // token => user id
+            alert("deleted");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+  
+  <style>
+    *{
+      background-color: blanchedalmond;
+    }
+    
+  </style>
+</head>
+<body>
+  <h2>registration Form</h2>
+
+
+  <form id="registrationForm" onsubmit="return validateForm()" >
+
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" placeholder="Enter your Name"  required>
+    <span id="fullNameError" class="error"></span>
+   <br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+   
+    <br><br>
+    
+    <label for="city">City:</label>
+
+    <select id="city" name="city">
+      <option value="city1">Luxor </option>
+      <option value="city2">qena</option>
+      <option value="city3">cairo</option>
+
+    </select>
+    <br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    
+    <label for="repeatPassword"> Repeat Password :</label>
+    <input type="password" id="repeatPassword" name="repeatPassword" required>
+    <br><br>
+    
+    <label for="terms">remember me</label>
+    <input type="checkbox" id="terms"  onclick="createlocalstorage()" name="terms" required>
+    <br><br>
+    
+    <!-- <input type="submit" value="Login"> -->
+    <button onclick="deletelocalstorage()"> Login </button>
+    <button onclick="readlocalstorage()">Read localstorage</button>
+  
+  </form>
+  <script>
+
+
+      function createlocalstorage(){
+       var username=document.getElementById("fullName").value;
+       var password=document.getElementById("password").value;
+       localStorage.setItem("userName",username );
+       localStorage.setItem("userPassword",password);
+
+      }
+
+
+      function readlocalstorage() {
+
+       if (localStorage.userName) {
+         var name = localStorage.getItem("userName");
+         console.log(name);
+        }
+       if (localStorage.userPassword) {
+         var pass = localStorage.userPassword;
+         console.log(pass);
+        }
+     }
+
+     function deletelocalstorage() {
+            localStorage.removeItem("userName");
+            localStorage.removeItem("userPassword");
+           
+        }
+  </script>
+  </body>
+  </html>

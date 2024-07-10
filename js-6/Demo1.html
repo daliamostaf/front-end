@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getData()">Get Data</button>
+    <script>
+        function getData(){
+            // step1
+            var xhr=new XMLHttpRequest();
+            // true => async
+            // false => sync
+            // step2
+            xhr.open("get","./data.json");
+            // step3
+            xhr.onreadystatechange=function() {
+                if(xhr.readyState==4&&xhr.status==200)
+                {
+                    var data=xhr.response;
+                    // console.log(data);
+                    var dataAfterParse=JSON.parse(data);
+                    // console.log(data[1].title);
+                    // console.log(dataAfterParse[1].title);
+                    console.log(dataAfterParse);
+
+                    // for(var i=0;i<dataAfterParse.length;i++){
+                    // console.log(dataAfterParse[i].title);
+
+
+                    // }
+                }
+            }
+
+            // step4
+
+            xhr.send();
+
+        }
+    </script>
+</body>
+</html>
