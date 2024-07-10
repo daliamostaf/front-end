@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing Canvas</title>
+
+
+
+  <style>
+    #canvas {
+      border: 1px solid black;
+      cursor: crosshair;
+    }
+  </style>
+ 
+</head>
+
+<body>
+  <canvas id="canvas" width="500" height="450"></canvas>
+  
+  <script>
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+    let isDrawing = false;
+    let isErasing = false;
+    let isClearing = false;
+
+    canvas.addEventListener('mousedown', (event) => {
+      isDrawing = true;
+      isErasing = event.button === 2;
+      if (isErasing) {
+        isClearing = true;
+      } else {
+        draw(event);
+      }
+    });
+
+    canvas.addEventListener('mousemove', draw);
+
+    canvas.addEventListener('mouseup', () => {
+      isDrawing = false;
+      isClearing = false;
+    });
+
+    canvas.addEventListener('mouseout', () => {
+      isDrawing = false;
+      isClearing = false;
+    });
+
+    function draw(event) {
+      if (!isDrawing) return;
+
+      const { offsetX, offsetY } = event;
+
+      context.lineWidth = 5;
+      context.lineCap = 'round';
+
+      if (isClearing) {
+        context.clearRect(offsetX - 10, offsetY - 10, 20, 20); 
+      } else {
+        context.strokeStyle = 'black';
+        context.lineTo(offsetX, offsetY);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(offsetX, offsetY);
+      }
+    }
+  </script>
+</body>
+</html>
+</body>
+</html>
