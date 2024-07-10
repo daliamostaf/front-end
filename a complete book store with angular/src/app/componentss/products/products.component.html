@@ -1,0 +1,58 @@
+
+
+<!-- <img src="{{str1.logo}}" width="100px"> -->
+<!-- <p>products works!</p> -->
+<!-- interpolation -->
+<!-- <h1>{{productName}}</h1>
+<h3>{{productQuantity}}</h3>
+<h4>{{productId}}</h4>
+<p>{{price()}}</p> -->
+
+<!-- <h4>{{str1.Name}}</h4> -->
+<!-- <p *ngFor="let item of str1.brances">{{item}}</p> -->
+ <h2>Data:{{d1|date}}</h2>
+ 
+   
+  
+<div>{{card|credit}}</div>
+<!-- Day3 - task -->
+<!-- <select name="sel" id="sel" class="form-control mb-4" [(ngModel)] ="select">
+    <option value="0">All</option>
+    <option *ngFor="let cat of catList" [value]="cat.ID">{{cat.Name}}</option>
+</select> -->
+ <!-- <h6>{{select}}</h6> -->
+ 
+<div class="container-fluid row" >
+  
+    
+    <ng-container *ngFor="let i of productsAfterFilter " >
+       
+        <!-- <div  class="col-md-4 mb-3" *ngIf ="select == i.CategoryID||select == 0" [routerLink] ="['/prodectdetails',i.ID]" [ngClass]="{'bg-warning':i.Quantity==1}"    appProductCard> -->
+        <div  class="col-md-4 mb-3"  [routerLink] ="['/prodectdetails',i.ID]" [ngClass]="{'bg-warning':i.Quantity==1}"    appProductCard>
+            <img [src]="i.imgUrl" alt="" height="180px" class="img-fiuid" *ngIf="lo" >
+        <h3>{{i.Name|uppercase}}</h3> 
+        <h2>{{i.Quantity}}</h2>
+        <h1>{{i.Price|currency:'USD':'symbol'}}</h1>
+        <button class="btn btn-primary" (click)="fun()"  [hidden]= "i.Quantity==0" (click)="decreaseQuantity(i)" [disabled]="i.Quantity === 0">Buy</button>
+        <div *ngIf="!lo">Thanks for purshesed from our store {{clintname}}</div>
+        <button class="btn btn-primary ml-8"> Details</button>
+
+
+        <div [ngSwitch]="i.Quantity">
+
+            <div *ngSwitchCase="0">Out of stock</div>
+            <div *ngSwitchCase="1">Last One Item</div>
+            <div *ngSwitchCase="2">Last Two Item</div>
+            <div *ngSwitchDefault>In Stock</div>
+      
+        </div>
+
+        
+            <span>{{ i.Quantity }}</span>
+         
+    </div>
+    </ng-container>
+    
+</div>
+ 
+

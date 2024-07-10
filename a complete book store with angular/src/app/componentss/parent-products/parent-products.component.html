@@ -1,0 +1,12 @@
+<!-- <p>parent-products works!</p> -->
+<!-- Day4-Task -->
+<!--  Q1- parent components  -->
+<h3> select from here</h3>
+<select name="sel" id="sel" class="form-control mb-4" [(ngModel)] ="select">
+    <option value="0">All</option>
+    <option *ngFor="let cat of catList" [value]="cat.ID">{{cat.Name}}</option>
+</select>
+
+
+<!-- {{select}} -->
+<app-products [selectcatfromparentv]="select"></app-products>
