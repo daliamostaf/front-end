@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title> Day 3</title>
+
+  <style>
+ div{
+  padding-left: 66px;
+  margin: 0%;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images img {
+  width: 200px;
+  height: 200px;
+  transition: transform 0.3s ease;
+  border: 0px;
+  padding-left: 15px;
+}
+
+.images img:hover {
+  transform: scale(1.2);
+}
+.h{
+  text-align: center;
+  color: darkblue;
+  font-size: 30px;
+}
+
+  </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="h"> photos gallery </h1>
+    </header>
+    <div class="images">
+      <img src="1.jpg"  class="1" alt="photo1">
+      <img src="2.jpg" class="2" alt="photo2">
+      <img src="3.jpg" class="3" alt="photo3">
+      <img src="4.jpg" class="4" alt="photo4">
+
+    </div>
+   
+    
+   <script>
+     const contactChip = document.querySelector('.contact-chip');
+     const closeButton = document.querySelector('.close-button');
+
+     closeButton.addEventListener('click', function() {
+     contactChip.classList.toggle('open');
+     contactChip.classList.toggle('closed');
+      });
+     </script>
+  </body>
+</html>
+
+
+
+
