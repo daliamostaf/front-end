@@ -1,0 +1,85 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index3_style.css">
+    <title>
+      day 4
+    </title>
+    <style>
+        .body{
+            margin:0;
+        }
+        
+        
+        .chip {
+            display: inline-block;
+            padding: 0 25px;
+            height: 50px;
+            font-size: 18px;
+            line-height: 50px;
+            border-radius: 25px;
+            background-color: #f1f1f1;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .chip img {
+            float: left;
+            margin: 0 10px 0 -25px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+        
+        .closebtn {
+            padding-left: 10px;
+            color: #888;
+            font-weight: bold;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+            border: none;
+            margin-top: 15px;
+        }
+        
+        .closebtn:hover {
+            color: #000;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+   
+</head>
+<body class="body">
+    <div class="chip">
+        <img src="o.png" alt="person" width="96" height="96">
+        <span class="text">Dalia mostafa</span>
+        <button class="closebtn">&times;</button>
+    </div>
+          
+    <script>
+        const chip = document.querySelector('.chip');
+        const closebtn = document.querySelector('.closebtn');
+        const text = document.querySelector('.text');
+        const person = document.querySelector('img');
+      
+
+     
+        closebtn.addEventListener('click', function() {
+            chip.classList.add('closed');
+            text.classList.add('hidden');
+            closebtn.classList.add('hidden');
+        });
+
+        person.addEventListener('click', function() {
+            chip.classList.remove('closed');
+            text.classList.remove('hidden');
+            closebtn.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
