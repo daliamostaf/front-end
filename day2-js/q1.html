@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./q1.js"></script>
+   <style>
+       *{
+           background-color: darkorchid;
+       }
+   </style>
+    
+
+    </head>
+    
+    <body>
+        
+        <p id="tip"></p>
+        
+        <script>
+        
+        var tips = [
+          "A JavaScript array's length property and numerical properties are connected..",
+         "Many array methods take a callback function as an argument. The callback function is called sequentially and at most once for each element in the array",
+          "Among methods that iterate through multiple elements, the following do an in check before accessing the index and do not conflate empty slots with",
+          "There are two other methods that take a callback function and run it at most once for each element in the array, but they have slightly different signatures from typical iterative methods"
+        ];
+        
+        function Tips() {
+          var randomIndex = Math.floor(Math.random() * tips.length);
+          document.getElementById("tip").textContent = tips[randomIndex];
+        }
+        
+        
+      Tips();
+        </script>
+        </body>   
+
+        
+</html>
