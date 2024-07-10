@@ -1,0 +1,13 @@
+{
+    "ID": 123,
+    "name": "esraa",
+    "Age": 21,
+    "Address": {
+      "street": "luxor",
+      "city": "hagag",
+      "state": "5"
+    },
+    "Skills": ["Programming", "Problem Solving", "Communication"],
+    "IsLeader": true
+  }
+  

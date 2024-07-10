@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+        var students = [
+        {
+            "ID": 123,
+            "name": "esraa",
+            "Age": 21,
+            "Address": {
+                "street": "luxor",
+                "city": "hagag",
+                "state": "5"
+                       },
+            "Skills": ["Programming", "Problem Solving", "Communication"],
+            "IsLeader": true
+        },
+        {
+            "ID": 696,
+            "name": "ahmed",
+            "Age": 25,
+            "Address": null,
+            "Skills": ["Design", "workharder", "Teamwork"],
+            "IsLeader": false
+        },
+        {
+            "ID": 477,
+            "name": "ali",
+            "Age": 19,
+            "Address": {
+            "street": "cairo",
+            "city": "giza",
+            "state": "10",
+            },
+            "Skills": ["Problem Solving", "Leadership", "Communication"],
+            "IsLeader": true
+        }
+]
+;
+
+        for (var i = 0; i < students.length; i++) {
+        console.log("Student Name:", students[i].name);
+        console.log("Skills:", students[i].Skills);
+        console.log("----------");
+        }
+
+        </script>
+</body>
+</html>

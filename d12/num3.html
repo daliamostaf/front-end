@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="photo">
+
+    </div>
+    
+    <input type="text" id="input1" name="postId">
+    <button onclick="getnameByID()">Get name by id</button>
+
+    <div id="div1"></div>
+    <script>
+        var req=new XMLHttpRequest();
+        req.open("GET", "https://reqres.in/api/users/1" ,"true");
+        req.onreadystatechange=function(){
+            if(req.readyState==4&&req.status==200){
+                var afterparsing=JSON.parse(req.responseText);
+                console.log(afterparsing.data.id );
+                document.getElementById("photo").innerHTML=`<img src="${jj.data.avatar}" alt="photo">`;
+            }
+        }
+        req.send();
+
+        function getnameByID(){
+            var input1 = document.getElementById("input1").value;
+            var div = document.getElementById("div1");
+            var xhr=new XMLHttpRequest();
+            xhr.open("get","https://reqres.in/api/users/1",true);
+            if(req.readyState==4&&req.status==200){
+                var jj=JSON.parse(req.responseText);
+                if (jj.data.id == input1) {
+                    div.innerHTML = `<p>Name: ${jj.data.first_name} ${jj.data.last_name}</p>`;
+                
+            }}
+        }
+    </script>
+</body>
+</html>
